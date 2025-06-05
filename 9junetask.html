@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TechNova Solutions</title>
+    <style>
+        body{
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://fortuneoman.com/images/approach-img.jpg");
+            font-family: 'Segoe UI';
+            background-color: rgba(0, 0, 0, 0.5); 
+            color: #fff; 
+            margin: 20px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: #77add9;
+        }
+
+        .navbar {
+            background-color: #0d47a1;
+            padding: 10px;
+            text-align: center; 
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #1565c0;
+        }
+
+        h2 {
+            text-align: left;
+            color: #4182e3;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .services-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .service {
+            background-color: #e3f2fd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            flex: 1 1 calc(33% - 20px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .service:hover {
+            transform: translateY(-5px);
+        }
+        .service h3 {
+            color: #186dec;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .service p {
+            color: #333;
+            font-size: 16px;
+        }
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        
+
+
+
+
+        #technologies ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #technologies li {
+            background-color: #c8d1e9;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            color: #000
+        }
+        #technologies li:hover {
+            background-color: #9cd6ff;
+        }
+
+
+        #contact {
+            background-color: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+            color: #000;
+        }
+        #contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+        #contact-form label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        #contact-form input, #contact-form textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: #000; /* Set text color to black */
+            background-color: #fff;
+
+        }
+        #contact-form input[type="submit"] {
+            background-color: #7da0d5;
+            color: rgb(9, 76, 118);
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s;
+        }
+        #contact-form input[type="submit"]:hover {
+            background-color: #1565c0;
+        }
+        footer {
+            background-color: #0d47a1;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        
+
+        #address p {
+            background-color: #c8d1e9;
+            padding: 10px;
+            border-radius: 5px;
+            color: #000; 
+        }
+
+  
+
+
+
+
+    
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#technologies">Technologies</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <h1 style="text-align: center;">Welcome to TechNova Solutions</h1>
+    <p style="text-align: center;">Innovative IT Services & Custom Software Solutions to Accelerate Your Business</p>
+    <main>
+        <section id ="services">
+            <h2>Our Services</h2>
+            <div class="services-row">
+                <div class="service">   
+                    <h3>Custom Software Development</h3>
+                    <p>Tailored software solutions to meet your unique business needs.</p>
+                </div>
+                <div class="service">
+                    <h3>Cloud Solutions</h3>
+                    <p>Scalable cloud infrastructure and services to enhance your operations.</p>
+                </div>
+                <div class="service">
+                    <h3>Data Analytics</h3>
+                    <p>Transforming data into actionable insights for better decision-making.</p>
+                </div>
+                <div class="service">
+                    <h3>AI & Machine Learning</h3>
+                    <p>Implementing AI-driven solutions to automate processes and improve efficiency.</p>
+                </div>
+                <div class="service">
+                    <h3>Web Development</h3>
+                    <p>Creating responsive and user-friendly web applications.</p>
+                </div>
+                <div class="service">
+                    <h3>Mobile App Development</h3>
+                    <p>Building cross-platform mobile applications for iOS and Android.</p>
+                </div>
+                
+                
+            </div>
+        </section>
+
+        <section id="technologies">
+            <h2>Technologies We Use</h2>
+            <ul>
+                <li>Python</li>
+                <li>JavaScript (React, Node.js)</li>
+                <li>AWS & Azure</li>
+                <li>Docker & Kubernetes</li>
+                <li>TensorFlow & PyTorch</li>
+                <li>PostgreSQL & MongoDB</li>
+            </ul>
+        </section>    
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                
+                <input type="submit" value="Send Message">
+            </form>
+        </section>
+        <section id="solutions">
+            <h3>Our Solutions</h3>
+            <p>Innovative IT services for your business needs.</p>
+        </section>
+
+        <section id="address">
+            <h3>Our Address</h3>
+            <p>Address: 404, 10-126, Ashoka Plaza, Banjara Hills Road No.1, Masab Tank, Hyderabad PIN: 500028</p>
+        </section>
+
+
+         
+    </main>
+<footer>
+  &copy; 2025 TechNova Solutions. All rights reserved.
+</footer>
+     
+
+</body>
