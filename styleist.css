@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+
+.navbar {
+  background-color: black;
+  padding: 2px;
+  overflow:hidden;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: underline;
+  padding: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  display: flex;
+}
+
+.navbar a:hover {
+  background-color: #555;
+}
+
+ul.horizontal {
+  display: flex;
+  list-style: none;
+  float: right;
+}
+
+
+.sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
+}
+
+ul.vertical {
+    display:block;
+    list-style: none;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 18px 8px 8px 32px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #555;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 100px; 
+}
+.card1{
+    border-color:#fff;
+    border-style:double;
+    border-radius:5px;
+    padding:15px;
+    justify-content: center;
+    width:300px;
+    margin:20px 30px;
+    background-color: rgb(15, 46, 28);
+    color:white;
+    
+}
+.card2{
+    border-color:#fff;
+    border-style:double;
+    border-radius:5px;
+    padding:15px;
+    justify-content: center;
+    width:300px;
+    margin:20px 30px;
+    background-color: rgb(15, 46, 28);
+    color:white;
+}
+.card3{
+    border-color:#fff;
+    border-style:double;
+    border-radius:15px;
+    padding:5px;
+    justify-content: center;
+    width:300px;
+    margin:20px 30px;
+    background-color: rgb(15, 46, 28);
+    color:white;
+}
+.header{
+    display:flex;
+    margin:20px 300px;
+    width:1000px;
+
+}
+
+h1,h2,h3{
+    color: white;
+    text-align: center;
+    font-size: 24px;
+}
+p{
+    
+    padding:20px
+}
+.linkedin{
+    text-align: center;
+    color: rgb(22, 127, 212);
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+.linkedin a {
+    color: rgb(212, 22, 168);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.linkedin a:hover {
+    color: #020d13;
+}
+.linkedin a:active {
+    color: #079b20;
+}
+
+.linkedin a:visited {
+    color: rgb(235, 14, 14);
+}
+.linkedin a:click {
+    color: #de6113;
+}
