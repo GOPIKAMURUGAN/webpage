@@ -1,0 +1,145 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.search-container {
+  position: relative;
+  width: 10rem;
+  margin: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 35px 10px 10px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 6rem;
+  top: 50%;
+      
+}
+
+.hover-effect{
+  width: 200px;
+  height: 70px;
+  background-color: lightblue;
+  border: 2px solid darkblue;
+    
+}
+.hover-effect:hover::before {
+  content: "👉 ";
+    
+}
+
+.hover-effect:hover::after {
+  content: " 👈";
+    
+}
+
+.skills li {
+  position: relative;
+  list-style: none;
+  padding-left: 25px;
+  margin-bottom: 10px;
+
+
+}
+
+.skills li::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  color: green;
+}
+
+.zooming-effect{
+  width: 10rem;
+  height: 10rem;   
+  background-color: lightcoral;   
+  transition: transform 0.3s;
+  border: 2px solid darkred;
+  text-align: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+.zooming-effect:hover {
+  transform: scale(120%);
+}
+
+.outer{
+  width:80vw;
+  height:250vh;
+  margin: 150px auto;
+  border: 2px solid black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.inner{
+  width: 50vw;
+  height: 150vh;
+  margin: auto;
+  border: 2px solid green;
+}
+
+
+.innermost{
+  width: 30vw;
+  height: 100vh;  
+  margin: auto;
+  border: 2px solid blue;
+}
+
+.box{
+  width: 100px;
+  height: 100px;
+}
+
+.absolute{
+  background-color: rgb(210, 109, 109);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.relative{
+  background-color: rgb(196, 196, 14);
+  position: relative;
+  top: 20px;
+  left: 25rem;
+}
+
+
+.relative:hover{
+  background-color: rgb(212, 11, 41);
+  transform: scale(150%,150%);
+}
+
+.fixed{
+  background-color: lightgray;
+  position: fixed;
+  top: 12rem;
+  left: 2rem;
+  z-index: 1;
+
+}
+.sticky{
+  background-color: rgb(0, 251, 251);
+  position: sticky;
+  top: 50px;
+ 
+}
+
+.relative1{
+  position: relative;
+  top: -170px;
+  background-color: lightblue;
+  
+}
