@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <link rel="icon" href="data; ">
+</head>
+<body>
+    <script>
+        // task1
+        let name ="Gopika Murugan";
+        if(typeof name === "string"){
+            console.log("Given name is string");
+        }
+        let age =20;
+        if(typeof age === "number"){
+            console.log("Given age is number");
+        }
+        let ch = 'G';
+        if(typeof ch === "string"){
+            console.log("Given ch is character");
+        }
+
+        // task2
+        let result = name+age;
+        console.log(result);
+
+
+        // task3
+        console.log(name.charAt(1));
+
+        // task4
+
+        console.log(name.lastIndexOf("p"));
+
+        // task5
+        let a = "5";
+        let b = "6";
+        let c = 7;
+        let d = Number(a) + Number(b); 
+        console.log(d);
+        // typecasting illa
+        let e = a + c;
+        console.log(e);
+
+        // task6
+        let char = "Welcome";
+        let value = Number(char);
+        console.log(value);
+
+        // task7
+        let x = 8.6;
+        console.log(Number.isInteger(x));
+
+        // task8
+        console.log(parseInt("33.7"));
+        console.log(parseInt("67"));
+        console.log(parseInt("89abc"));
+        
+
+        console.log(parseFloat("97.9"));
+        console.log(parseFloat("78"));
+        console.log(parseFloat("90xyz"));
+
+        // task9
+        let price = 56.7322;
+        console.log(price.toFixed(2));
+        console.log(price.toFixed(3));
+
+        //task10
+        let choice = 3;
+        let color;
+        switch(choice){
+            case 1:
+                color="red";
+                break;
+
+            case 2:
+                color="pink";
+                break;
+                
+            case 3:
+                color="blue";
+                break;
+                
+            default:
+                color="black";  
+        }
+        console.log(color);
+
+        // task11
+        // var y=39;
+        let z=49;
+        const w=59;
+        {
+            var y=93;
+            z=94;
+            const w=95;
+        }
+        console.log(y);
+        console.log(z);
+        console.log(w);
+        // task12
+
+        let arr=[1,2,3,4,5,6];
+        console.log(arr.push(8));
+        console.log(arr.pop());
+        console.log(arr.shift());
+        console.log(arr.unshift(8));
+        console.log(delete arr[3]);
+        console.log(arr);
+
+
+        // task13
+
+        arr.splice(1,2,234);
+        console.log(arr);
+
+        // task14
+
+        arr.reverse();
+        console.log(arr);
+
+        // task15
+        let array = [23,33];
+        let merge = arr.concat(array);
+        console.log(merge);
+
+        // task16
+        let student = {name:"gopi", age:"20", marks:[95, 85, 75, 65]};
+        console.log(student.marks[2]);
+
+        
+
+
+        
+
+    </script>
+</body>
+</html>
