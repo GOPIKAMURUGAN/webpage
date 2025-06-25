@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body style="height: 1500px;">
+    <button id="myButton">Click Me!</button>
+    <h2>close tab</h2>
+    <h1 id="size">Resize window</h1>
+    <h1 id="pos"> scrolling</h1>
+    <p class="demo"> javascript</p>
+    <p class="demo" style="display: none;">vanakam</p>
+    <p id="over">full stack</p>
+    <p id="out">welcome</p>
+    <h2 id="resize">window size:</h2>
+    <p id="down">Key Down:</p>
+    <p id="up">Key Up:</p>
+    <p id="Down">Key Down Count:0</p>
+    <p id="Up">Key Up Count:0</p>
+    <button onclick="sayHello()">click</button>
+    <button onmouseover="hover()">hover</button>
+    <button onmouseout="hoverOut()">hoverout</button>
+    <button onclick="newtab()">open google </button>
+    <button onclick="window.location.reload()">reload</button>
+    <button onclick="setDelay()">settime</button>
+    <button onclick="repeat()">interval</button>
+
+
+    <script>
+        const button = document.getElementById('myButton');
+        button.addEventListener("click", function () {
+            alert("hello");
+        });
+        button.addEventListener("click", function () {
+            alert("world");
+        });
+        button.addEventListener("mouseover", function () {
+            button.style.backgroundColor = 'blue';
+        });
+        button.addEventListener("mouseout", function () {
+            button.style.backgroundColor = 'yellow';
+        });
+
+        window.addEventListener("beforeunload", function (e) {
+            e.preventDefault();
+            e.returnValue = '';
+        });
+        window.addEventListener("resize", function () {
+            document.getElementById("size").innerText = "window resized";
+        });
+
+        window.addEventListener("scroll", function () {
+            document.getElementById("pos").innerText = "window scrolled";
+        });
+        function sayHello() {
+            document.getElementsByClassName("demo")[0].textContent = "React";
+            document.getElementsByClassName("demo")[1].innerText = "heloooooo";
+             console.log("innerText:", document.getElementsByClassName("demo")[1].innerText);
+        };
+        function hover() {
+            document.getElementById("over").innerText = "developer";
+        };
+        function hoverOut() {
+            document.getElementById("out").innerText = "bye";
+        };
+        function newtab() {
+            opentab = window.open("https://www.google.com", "_blank");
+
+        }
+        function showsize() {
+            let width = window.innerWidth;
+            let height = window.innerHeight;
+            document.getElementById("resize").innerText = "Window Size: Width " + width + "px, Height" + height + "px";
+
+
+        }
+        window.addEventListener("resize", showsize);
+        showsize();
+
+        function setDelay() {
+            setTimeout(function () {
+                alert("this is delayed");
+            }, 2000);
+        }
+        function repeat() {
+            setInterval(function () {
+                alert("this is repeated");
+            }, 3000);
+        }
+        window.addEventListener("keydown", function (event) {
+            document.getElementById("down").innerText = "Key Down: " + event.key;
+        });
+
+        window.addEventListener("keyup", function (event) {
+            document.getElementById("up").innerText = "Key Up: " + event.key;
+        });
+
+        let downCount = 0;
+        let upCount = 0;
+        window.addEventListener("keydown", function () {
+            downCount++;
+            document.getElementById("Down").innerText = "Key Down Count: " + downCount;
+        });
+
+        window.addEventListener("keyup", function () {
+            upCount++;
+            document.getElementById("Up").innerText = "Key Up Count: " + upCount;
+        });
+        let str = "hello";
+        console.log("abc".repeat(3));
+
+
+
+        
+
+    </script>
+</body>
+
+
+
+</html>

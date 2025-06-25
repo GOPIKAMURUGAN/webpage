@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- task1 -->
+
+    <p id="countdown">8</p>
+    <button onclick="countdown()">Start</button>
+
+    <p id="time">0</p>
+    <button onclick="start()">Startbtn</button>
+    <button onclick="stop()">Stop</button>
+
+    <input type="text" id="name" placeholder="Enter your name">
+    <button id="setBtn">Set Value</button>
+    <button id="getBtn">Get Value</button>
+    <p id="result"></p>
+
+    <button id="myBtn">Click Me</button>
+    <p id="result"></p>
+
+    <div id="box"></div>
+    <button onclick="moveBox()">Animate</button>
+
+
+
+    <p class="sent">this is original <i>text</i></p>
+
+    <p id="myPara">Hello Gopika!</p>
+
+    <button onclick="addClass()">Add</button>
+    <button onclick="removeClass()">Remove</button>
+    <button onclick="toggleClass()">Toggle</button>
+
+    <script>
+        function countdown() {
+            let time = 8;
+            const counting = document.getElementById("countdown");
+            const interval = setInterval(() => {
+                counting.textContent = time;
+                time--;
+                if (time < 0) {
+                    clearInterval(interval);
+                    counting.textContent = "done";
+                }
+            }, 1000);
+        }
+
+
+
+        let count = 0;
+        let timer;
+
+        function start() {
+            if (!timer) {
+                timer = setInterval(() => {
+                    count++;
+                    document.getElementById("time").textContent = count;
+                }, 1000);
+            }
+        }
+
+        function stop() {
+            clearInterval(timer);
+            timer = null;
+        }
+
+        // task2
+        const person = {
+            name: "Gopika",
+            age: 20,
+            address: {
+                city: "Kochi",
+                state: "Kerala"
+            },
+            hobbies: ["Reading", "Sleeping"],
+            showDetails: function () {
+                console.log("Name: " + this.name);
+                console.log("Age:" + this.age);
+                console.log("State: " + this.address.state);
+                console.log("Hobbies:" + this.hobbies[0]);
+
+            }
+        };
+        person.showDetails();
+        // task3
+
+        let array = [1, 2, 3, 4, 5];
+        let num1 = array.filter((num) => num % 2 === 0);
+        console.log(num1);
+
+        let num2 = array.map(num => num * 2);
+        console.log(num2);
+
+        let num3 = array.reduce((sum, value) => sum + value, 0);
+        console.log(num3);
+
+        // task4
+        function divide(a, b) {
+            try {
+                if (b === 0) {
+                    throw new Error("Cannot divide by zero");
+                }
+                console.log("Result:", a / b);
+            } catch (err) {
+                console.log("Error:", err.message);
+            } finally {
+                console.log("Division attempt finished.");
+            }
+        }
+
+        divide(10, 2);
+        divide(10, 0);
+
+        // task5
+
+        $("#setBtn").click(function () {
+            $("#name").val("Gopika");
+
+        });
+        $("#getBtn").click(function () {
+            let value = $("#name").val();
+            $("#result").text("You entered: " + value);
+        });
+
+        // task6
+        let para = $(".sent").html();
+        console.log(para);
+
+        let Para = $(".sent").text();
+        console.log(Para);
+
+        // task7
+        function addClass() {
+            $("#myPara").addClass("highlight");
+        }
+
+        function removeClass() {
+            $("#myPara").removeClass("highlight");
+        }
+
+        function toggleClass() {
+            $("#myPara").toggleClass("highlight");
+        }
+        // task8
+
+        $("#myBtn").click(function () {
+            $("#result").text("Button clicked!");
+        });
+
+        // task9
+        function moveBox() {
+            $("#box").animate({
+                left: "250px",
+                height: "150px",
+                width: "150px"
+            }, 1000);
+        }
+
+    </script>
+</body>
+
+</html>
